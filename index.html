@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Webinar científico sobre dermatitis atópica. Actualización clínica orientada a profesionales sanitarios. Inscripción online." />
+
+  <title>Webinar científico: dermatitis atópica | Generis Pharma</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Source Sans 3 -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <div class="container">
+      <img class="logo" src="./assets/logo.svg" alt="Generis Pharma" width="160" height="48">
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+
+        <!-- Left: content -->
+        <div class="hero__content">
+          <p class="pill">Webinar científico</p>
+
+          <h1 id="hero-title">
+            Estrategias efectivas para el control de la dermatitis atópica
+          </h1>
+
+          <p class="lead">
+            Actualización práctica orientada al manejo clínico y la optimización del tratamiento en consulta.
+          </p>
+
+          <div class="hero__meta" aria-label="Detalles del webinar">
+            <div class="meta-row">
+              <span class="meta-icon" aria-hidden="true">📅</span>
+              <span><strong>18 de marzo 2026</strong></span>
+            </div>
+            <div class="meta-row">
+              <span class="meta-icon" aria-hidden="true">🕒</span>
+              <span><strong>18:00 - 19:30 (GMT+1)</strong></span>
+            </div>
+
+            <hr class="divider" />
+
+            <div class="speaker">
+              <img class="speaker__avatar" src="./assets/speaker.jpg" alt="Dr. Julian Vance" width="48" height="48">
+              <div class="speaker__info">
+                <p class="speaker__name"><strong>Dr. Julian Vance</strong></p>
+                <p class="speaker__role">Dermatología</p>
+              </div>
+            </div>
+          </div>
+
+          <a class="btn btn--primary" href="#form">Inscripción al webinar</a>
+        </div>
+
+        <!-- Right: form -->
+        <aside class="hero__aside" aria-label="Formulario de inscripción">
+          <div class="form-surface">
+            <form id="form" class="form" novalidate>
+              <h2 class="form__title">Inscripción al webinar</h2>
+
+              <div class="field">
+                <label for="fullName">Nombre y apellido(s)</label>
+                <input id="fullName" name="fullName" type="text" autocomplete="name" required />
+                <p class="hint">Introduzca su nombre completo tal como figura en su acreditación.</p>
+                <p class="error" id="error-fullName" aria-live="polite"></p>
+              </div>
+
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+                <p class="hint">Usaremos este email para enviarle el acceso.</p>
+                <p class="error" id="error-email" aria-live="polite"></p>
+              </div>
+
+              <div class="field">
+                <label for="specialty">Especialidad médica</label>
+                <select id="specialty" name="specialty" required>
+                  <option value="" selected>Selecciona una opción</option>
+                  <option value="Dermatología">Dermatología</option>
+                  <option value="Alergología">Alergología</option>
+                  <option value="Pediatría">Pediatría</option>
+                  <option value="Medicina familiar">Medicina familiar</option>
+                  <option value="Otra">Otra</option>
+                </select>
+                <p class="hint">Elija su especialidad.</p>
+                <p class="error" id="error-specialty" aria-live="polite"></p>
+              </div>
+
+              <div class="checkbox">
+                <input id="privacy" name="privacy" type="checkbox" required />
+                <label for="privacy">
+                  He leído y acepto la <a href="#" target="_blank" rel="noopener">política de privacidad</a>.
+                  <span aria-hidden="true">*</span>
+                </label>
+              </div>
+              <p class="error" id="error-privacy" aria-live="polite"></p>
+
+              <div class="checkbox">
+                <input id="comms" name="comms" type="checkbox" />
+                <label for="comms">
+                  Acepto recibir comunicaciones sobre este webinar y futuros eventos formativos.
+                </label>
+              </div>
+
+              <button class="btn btn--primary btn--block" type="submit">
+                Confirmar inscripción
+              </button>
+
+              <p class="form__note" aria-live="polite" id="form-status"></p>
+            </form>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- OBJECTIVES -->
+    <section class="section" aria-labelledby="objectives-title">
+      <div class="container">
+        <h2 id="objectives-title">Objetivos del webinar</h2>
+        <p class="section__lead">
+          Un webinar diseñado para profesionales que buscan actualización científica de calidad.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Actualización basada en evidencia</h3>
+            <p>Revisión de los criterios terapéuticos actuales y su aplicación en el manejo diario del paciente con dermatitis atópica.</p>
+          </article>
+
+          <article class="card">
+            <h3>Enfoque práctico en consulta</h3>
+            <p>Claves para optimizar decisiones clínicas, ajustar tratamientos y mejorar la adherencia terapéutica.</p>
+          </article>
+
+          <article class="card">
+            <h3>Casos y recomendaciones clínicas</h3>
+            <p>Análisis de situaciones frecuentes y estrategias aplicables desde la primera visita.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCIENTIFIC CONTENT -->
+    <section class="section section--subtle" aria-labelledby="resources-title">
+      <div class="container">
+        <h2 id="resources-title">Contenido científico relacionado</h2>
+        <p class="section__lead">
+          Accede a recursos y sesiones previas orientadas al abordaje clínico de la dermatitis atópica.
+        </p>
+
+        <div class="resource-grid">
+          <article class="resource-card">
+            <img src="./assets/resource-webinar.jpg" alt="Investigador en laboratorio usando un microscopio" loading="lazy">
+            <h3>Webinar 2025 — Nuevos enfoques terapéuticos</h3>
+            <p>Nuevos enfoques terapéuticos en dermatitis atópica.</p>
+            <a class="link" href="#" aria-label="Ver recurso: Webinar 2025 — Nuevos enfoques terapéuticos">Ver recurso</a>
+          </article>
+
+          <article class="resource-card">
+            <img src="./assets/resource-document.jpg" alt="Profesionales revisando documentación clínica" loading="lazy">
+            <h3>Documento técnico</h3>
+            <p>Optimización del tratamiento en pacientes crónicos.</p>
+            <a class="link" href="#" aria-label="Ver recurso: Documento técnico">Ver recurso</a>
+          </article>
+
+          <article class="resource-card">
+            <img src="./assets/resource-session.jpg" alt="Profesional sanitario en un entorno clínico" loading="lazy">
+            <h3>Sesión clínica</h3>
+            <p>Manejo de casos complejos en consulta.</p>
+            <a class="link" href="#" aria-label="Ver recurso: Sesión clínica">Ver recurso</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <img class="logo logo--small" src="./assets/logo.svg" alt="Generis Pharma" width="120" height="36">
+      <nav aria-label="Enlaces legales">
+        <ul class="footer__links">
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Aviso legal</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">© 2026 Generis Pharma. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="./main.js"></script>
+</body>
+</html>
