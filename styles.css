@@ -1,6 +1,16 @@
-/* =========================================
-   1. CSS RESET (Moderno y ligero)
-========================================= */
+/* =========================================================
+   GENERIS WEBINAR LANDING — Base CSS (Mobile-first)
+   Objetivo:
+   - Un solo sistema de botones (btn + modifiers)
+   - Un solo sistema de cards y formularios
+   - Tokens alineados con los del diseño en Figma
+   - Layout mobile-first + desktop con media query
+========================================================= */
+
+
+/* =========================================================
+   1) RESET MODERNO (ligero)
+========================================================= */
 
 *,
 *::before,
@@ -39,31 +49,67 @@ select {
 }
 
 
-/* =========================================
-   2. DESIGN TOKENS (Variables)
-========================================= */
+/* =========================================================
+   2) TOKENS
+========================================================= */
 
 :root {
-  /* Brand */
-  --color-primary: #39A935;
-  --color-support: #778F9B;
+  /* Brand: acciones y botones */
+    --color-brand: #39A935;
+    --color-support: #778F9B; /* Color de apoyo: párrafos de las cards */
 
-  /* Backgrounds */
-  --color-background: #FFFFFF;
-  --color-background-subtle: #E8E8EF;
+  /* Contraste: títulos y jerarquía */
+    --color-brand-contrast: #111D4A;
+
+  /* Paleta color-primary */
+    --color-black: #151A15;
+    --color-primary-950: #0A290B;
+    --color-primary-900: #1C4B1C;
+    --color-primary-800: #225B20;
+    --color-primary-700: #257223; /* Color btn-hover*/
+    --color-primary-600: #2B9128;
+    --color-primary-500: #39A935; /* Brand color */
+    --color-primary-400: #61CB5D;
+    --color-primary-300: #97E194;
+    --color-primary-200: #C6EFC3;
+    --color-primary-100: #E2F8E0;
+    --color-primary-50: #F3FBF2;
+
+    /* Paleta color-contrast */
+    --color-contrast-950: #111D4A; /* Color constrast: headings */
+    --color-contrast-900: #19358F;
+    --color-contrast-800: #1739B6;
+    --color-contrast-700: #1446E1; /* Color para iconos */
+    --color-contrast-600: #1B5BF5;
+    --color-contrast-500: #327CFF; /* Color para los enlaces */
+    --color-contrast-400: #58A1FF;
+    --color-contrast-300: #8EC3FF;
+    --color-contrast-200: #BCDAFF;
+    --color-contrast-100: #D9E9FF; /* Borde de las cards o del form */
+    --color-contrast-50: #EEF6FF;
+
+    /* Error */
+    --color-error: #A83634;
+
+    /* Borders */
+    --color-border: #D9E9FF;
+
+    /* Backgrounds */
+    --color-background: #FAFAFA;
+    --color-background-subtle: #E8E8EF;
 
   /* Text */
-  --color-text-primary: #0F1B3D;
-  --color-text-secondary: #5F6B85;
-  --color-text-muted: #7C879E;
+  --color-text-primary: #111D4A;
+  --color-text-secondary: #778F9B;
+  --color-text-disabled: #rgba(21, 26, 21, 0.50);
 
-  /* Borders */
-  --color-border: #D6D9E2;
 
-  /* Radius scale (8pt system) */
+
+  /* Radius scale */
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
+  --radius-xl: 20px;
 
   /* Spacing scale */
   --space-xs: 8px;
@@ -72,18 +118,19 @@ select {
   --space-lg: 32px;
   --space-xl: 48px;
 
-  /* Container */
-  --container-max-width: 1120px;
+  /* Layout */
+  --container-max: 1200px;
 }
 
 
-/* =========================================
-   3. BASE TYPOGRAPHY
-========================================= */
+/* =========================================================
+   3) TIPOGRAFÍA
+   TODO diferenciar tamaños de mb y dk 🆘
+========================================================= */
 
 body {
-  font-family: 'Source Sans 3', sans-serif;
-  background-color: var(--color-background-subtle);
+  font-family: "Source Sans 3", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--color-background-subtle);
   color: var(--color-text-primary);
   line-height: 1.6;
 }
@@ -91,6 +138,7 @@ body {
 h1, h2, h3 {
   line-height: 1.2;
   font-weight: 700;
+  color: var(--color-text-primary);
 }
 
 h1 {
@@ -106,112 +154,326 @@ h3 {
 }
 
 p {
-  font-size: 1rem;
   color: var(--color-text-secondary);
+  font-size: 1rem;
 }
 
-small {
-  font-size: 0.875rem;
-  color: var(--color-text-muted);
+a {
+  color: var(--color-text-primary);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
 }
 
 
-/* =========================================
-   4. LAYOUT BASE
-========================================= */
+/* =========================================================
+   4) LAYOUT
+========================================================= */
 
 .container {
   width: 100%;
-  max-width: var(--container-max-width);
+  max-width: var(--container-max);
   margin: 0 auto;
   padding: var(--space-lg) var(--space-sm);
 }
 
 .section {
-  margin-bottom: var(--space-xl);
+  padding: var(--space-xl) 0;
 }
 
-.card {
-  background-color: var(--color-background);
+.section--subtle {
+  background: var(--color-background-subtle);
+}
+
+.surface {
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  padding: var(--space-md);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 
-/* =========================================
-   5. BUTTON BASE
-========================================= */
+/* =========================================================
+   5) COMPONENTE: BOTÓN
+   Uso:
+   - class="btn btn--primary"
+   - class="btn btn--primary btn--block"
+========================================================= */
 
-.button-primary {
-  display: inline-block;
-  background-color: var(--color-primary);
-  color: white;
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  padding: 0.85rem 1.25rem;
   border-radius: var(--radius-sm);
+
+  font-weight: 600;
+  text-decoration: none;
+
   border: none;
   cursor: pointer;
-  transition: background-color 0.2s ease;
-  text-align: center;
+
+  transition: filter 0.15s ease;
 }
 
-.button-primary:hover {
-  background-color: #2f8f2c;
+.btn--primary {
+  background: var(--color-primary-500);
+  color: var(--color-primary-50);
 }
 
-.button-primary:focus-visible {
-  outline: 3px solid rgba(57, 169, 53, 0.4);
+.btn--primary:hover {
+  background-color: var(--color-primary-700);
+  filter: brightness(0.95);
+}
+
+.btn--primary:focus-visible {
+  outline: 3px solid rgba(57, 169, 53, 0.35);
   outline-offset: 2px;
 }
 
+.btn--block {
+  width: 100%;
+}
 
-/* =========================================
-   6. FORM BASE
-========================================= */
 
-.form-group {
+/* =========================================================
+   6) COMPONENTE: FORMULARIO
+   - field: bloque label + control + hint + error
+========================================================= */
+
+.form {
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+.form__title {
+  margin-bottom: var(--space-md);
+}
+
+.field {
   margin-bottom: var(--space-md);
 }
 
 label {
   display: block;
   font-weight: 600;
-  margin-bottom: var(--space-xs);
+  margin-bottom: 8px;
   font-size: 0.95rem;
+  color: var(--color-text-primary);
 }
 
 input,
-select {
+select,
+textarea {
   width: 100%;
   padding: 0.75rem;
   border-radius: var(--radius-sm);
   border: 1px solid var(--color-border);
-  background-color: #fff;
+  background: #fff;
 }
 
 input:focus,
-select:focus {
+select:focus,
+textarea:focus {
   outline: none;
   border-color: var(--color-primary);
   box-shadow: 0 0 0 3px rgba(57, 169, 53, 0.2);
 }
 
+.hint {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
 
-/* =========================================
-   7. RESPONSIVE (Desktop breakpoint)
-========================================= */
+/* Errores (para cuando metamos JS) */
+.error {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #B42318;
+}
+
+/* Checkbox: área clicable más amplia */
+.checkbox {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: var(--space-sm);
+  align-items: start;
+  margin-bottom: var(--space-md);
+}
+
+.checkbox input {
+  margin-top: 4px;
+}
+
+
+/* =========================================================
+   7) HERO (Mobile-first)
+   Estructura esperada en HTML:
+   - .hero
+     - .container.hero__grid
+       - .hero__content
+       - .hero__aside (form)
+========================================================= */
+
+.site-header {
+  background: var(--color-background-subtle);
+  padding: var(--space-sm) 0;
+}
+
+.logo {
+  width: 160px;
+  height: auto;
+}
+
+.hero {
+  background: var(--color-background-subtle);
+  padding-bottom: var(--space-xl);
+}
+
+.hero__grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 6px 12px;
+  border-radius: 999px;
+
+  background: rgba(119, 143, 155, 0.18);
+  color: var(--color-text-primary);
+
+  font-weight: 600;
+  font-size: 0.9rem;
+
+  margin-bottom: var(--space-sm);
+}
+
+.lead {
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-md);
+
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+
+  max-width: 60ch;
+}
+
+/* Meta info del hero (fecha/hora/ponente) */
+.hero__meta {
+  margin-top: var(--space-md);
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+.meta-row {
+  display: flex;
+  gap: var(--space-xs);
+  align-items: center;
+  margin-bottom: var(--space-xs);
+}
+
+.meta-icon {
+  width: 24px;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid var(--color-border);
+  margin: var(--space-md) 0;
+}
+
+.speaker {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+.speaker__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+}
+
+.speaker__role {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-top: 2px;
+}
+
+/* Superficie externa del formulario (fondo con radio mayor) */
+.form-surface {
+  background: var(--color-background-subtle);
+  border-radius: var(--radius-xl);
+  padding: var(--space-md);
+}
+
+
+/* =========================================================
+   8) GRIDS (para secciones)
+========================================================= */
+
+.cards,
+.resource-grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+/* Card general (si la necesitas para objetivos / recursos) */
+.card {
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* =========================================================
+   9) DESKTOP BREAKPOINT
+========================================================= */
 
 @media (min-width: 1024px) {
   h1 {
-    font-size: 2.75rem; /* 44px desktop */
-  }
-
-  h2 {
-    font-size: 2rem;
+    font-size: 2.75rem; /* ~44px */
   }
 
   .container {
     padding: var(--space-xl) var(--space-md);
+  }
+
+  .hero__grid {
+    grid-template-columns: 1.2fr 1fr;
+    align-items: start;
+    gap: var(--space-xl);
+  }
+
+  .form-surface {
+    padding: var(--space-lg);
+  }
+
+  .form {
+    padding: var(--space-lg);
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .resource-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
