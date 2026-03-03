@@ -1,25 +1,31 @@
 # Generis Webinar Landing
 
-Landing page responsive para la inscripción a un webinar científico (dermatitis atópica).  
-Incluye formulario con validación en JavaScript y estado de confirmación tras envío correcto.
+**Landing page responsive** para la inscripción a un webinar científico (dermatitis atópica).  
+
+Proyecto realizado como prueba técnica para el puesto de **Frontend Developer & Web Designer en ShowerThinking**. 
 
 ## Demo
-- GitHub Pages: https://beatrizgmdevux.github.io/generis-webinar-landing/
+- **GitHub Pages**: https://beatrizgmdevux.github.io/generis-webinar-landing/
 
 ## Features
-- Diseño responsive (mobile-first + desktop)
-- Formulario con validación:
+- **Diseño responsive** (mobile-first + desktop)
+- **Hero** con la info del webinar (fecha, hora y ponente)
+- **Formulario** con validación:
   - Nombre y apellidos (obligatorio)
   - Email (obligatorio + formato)
   - Especialidad (obligatorio)
   - Política de privacidad (obligatorio)
-- Mensajes de error accesibles (`aria-live`) y foco en el primer campo inválido
-- Success state tras envío correcto (simulado)
+    - Mensajes de error accesibles (`aria-live`) y foco en el primer campo inválido
+    - Success state tras envío correcto (simulado)
+- **Value Proposition** (3 puntos clave de por qué asistir)
+- **Contenido Científico Relacionado** (otros recursos pasados)
+- **Footer**
 
 ## Tecnologías
-- HTML5 semántico
-- CSS3 (tokens + componentes, mobile-first)
-- Vanilla JavaScript (validación y estados UI)
+- **HTML5 semántico**
+- **CSS3** (tokens + componentes, mobile-first)
+- **Vanilla JavaScript** (validación y estados UI)
+- **GitHub Pages** (despliegue)
 
 ## Estructura del proyecto
 - `index.html` — Maquetación
@@ -27,9 +33,9 @@ Incluye formulario con validación en JavaScript y estado de confirmación tras 
 - `main.js` — Validación del formulario
 - `/public` — Assets (logo e imágenes)
 
-## Cómo ejecutarlo en local
-Opción 1: abrir `index.html` directamente (modo estático).
+## Diseño Figma
+- Link: https://www.figma.com/design/3zK28GhAyxZ4pI7MQ57zxi/Generis-Pharma---Prueba-t%C3%A9cnica?m=auto&t=2ZB0HJeIGSZSj4R8-1
 
-Opción 2 (recomendada): servidor local
-```bash
-npx serve .
+## Próximos pasos tras testeo con usuarios (genéricos)
+- Ajuste de tamaños de tipografía
+
