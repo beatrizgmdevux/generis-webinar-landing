@@ -37,7 +37,7 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="container hero__grid">
 
-          <!-- Detalles del Webinar -->
+          <!-- Columna izquierda -->
           <div class="hero__content">
             <p class="pill">Webinar científico</p>
 
@@ -51,98 +51,94 @@
 
             <div class="hero__meta" aria-label="Detalles del webinar">
               <div class="meta-row">
-                <span class="meta-icon material-symbols-outlined" aria-hidden="true">
-                  calendar_month
-                </span>
+                <span class="meta-icon material-symbols-outlined" aria-hidden="true">calendar_month</span>
                 <span><strong>18 de marzo 2026</strong></span>
               </div>
+
               <div class="meta-row">
-                <span class="meta-icon material-symbols-outlined" aria-hidden="true">
-                  alarm
-                </span>
+                <span class="meta-icon material-symbols-outlined" aria-hidden="true">alarm</span>
                 <span><strong>18:00 a 19:30 (GMT+1)</strong></span>
               </div>
 
-              <hr class="divider"/>
+              <hr class="divider" />
 
               <div class="speaker">
-                <img class="speaker__avatar" src="./public/speaker__photo.png" alt="Dr. Julian Vance" width="48" height="48">
+                <img
+                  class="speaker__avatar"
+                  src="./public/speaker__photo.png"
+                  alt="Dr. Julian Vance"
+                  width="48"
+                  height="48"
+                />
                 <div class="speaker__info">
                   <p class="speaker__name"><strong>Dr. Julian Vance</strong></p>
                   <p class="speaker__role">Dermatología</p>
                 </div>
               </div>
             </div>
-            
-            <!-- Formulario -->
-            <div class="hero__form">
-              <div class="form-surface">
-                <form id="form" class="form" action="#" method="post" aria-labelledby="form-title" novalidate>
-                  <h2 class="form-title">
-                    Inscripción al webinar
-                  </h2>
+          </div>
 
-                  <!-- Nombre -->
-                  <div class="field">
-                    <label for="fullName">Nombre y apellido(s)</label>
-                    <input id="fullName" class="fullName" type="text" autocomplete="name" placeholder="Lucía Galán" required>
-                    <p class="hint">Introduzca su nombre completo tal como figura en su acreditación.</p>
-                    <p class="error" id="error-fullName" aria-live="polite"></p>
-                  </div>
+          <!-- Columna derecha -->
+          <div class="hero__form">
+            <div class="form-surface">
+              <form id="form" class="form" action="#" method="post" aria-labelledby="form-title" novalidate>
+                <h2 class="form-title" id="form-title">Inscripción al webinar</h2>
 
-                  <!-- Email -->
-                  <div class="field">
-                    <label for="email">Email</label>
-                    <input id="email" class="email" type="email" autocomplete="email" placeholder="luciagalan@gmail.com" required>
-                    <p class="hint">Usaremos este email para enviarle el acceso.</p>
-                    <p class="error" id="error-fullName" aria-live="polite"></p>
-                  </div>
+                <!-- Nombre -->
+                <div class="field">
+                  <label for="fullName">Nombre y apellido(s)</label>
+                  <input id="fullName" name="fullName" type="text" autocomplete="name" placeholder="Lucía Galán" required />
+                  <p class="hint">Introduzca su nombre completo tal como figura en su acreditación.</p>
+                  <p class="error" id="error-fullName" aria-live="polite"></p>
+                </div>
 
-                  <!-- Selector especialidad -->
-                  <div class="field">
-                    <label for="specialty">Especialidad médica</label>
-                    <select id="specialty" class="specialty" required>
-                      <option value="" selected>Selecciona una opción</option>
-                      <option value="Dermatología" >Dermatología</option>
-                      <option value="Alergología" >Alergología</option>
-                      <option value="Pediatría" >Pediatría</option>
-                      <option value="Medicina familiar" >Medicina familiar</option>
-                      <option value="Otra">Otra</option>
-                    </select>
-                    <p class="hint">Elija su especialidad.</p>
-                    <p class="error" id="error-fullName" aria-live="polite"></p>
-                  </div>
-                  
-                  <!-- Checbox: Notificaciones y Privacidad -->
-                  <div class="checkbox">
-                    <input id="comms"  name="comms" type="checkbox">
-                    <label for="comms">
-                      Acepto recibir comunicaciones sobre este webinar y futuros eventos formativos.
-                    </label>
-                  </div>
+                <!-- Email -->
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" autocomplete="email" placeholder="luciagalan@gmail.com" required />
+                  <p class="hint">Usaremos este email para enviarle el acceso.</p>
+                  <p class="error" id="error-email" aria-live="polite"></p>
+                </div>
 
-                  <div class="checkbox">
-                    <input id="privacy"  name="privacy" type="checkbox" required>
-                    <label for="privacy">
-                      He leído y acepto la <a href="#" target="_blank" rel="noopener">política de privacidad</a>.
-                      <span aria-hidden="true">*</span>
-                    </label>
-                  </div>
-                  <p class="error" id="error-privacy" aria-live="polite"></p>
-                  
-                  <!-- Botón submit -->
-                  <button class="btn btn--primary btn--block" type="submit">
-                    Confirmar inscripción
-                  </button>
+                <!-- Especialidad -->
+                <div class="field">
+                  <label for="specialty">Especialidad médica</label>
+                  <select id="specialty" name="specialty" required>
+                    <option value="" selected>Selecciona una opción</option>
+                    <option value="Dermatología">Dermatología</option>
+                    <option value="Alergología">Alergología</option>
+                    <option value="Pediatría">Pediatría</option>
+                    <option value="Medicina familiar">Medicina familiar</option>
+                    <option value="Otra">Otra</option>
+                  </select>
+                  <p class="hint">Elija su especialidad.</p>
+                  <p class="error" id="error-specialty" aria-live="polite"></p>
+                </div>
 
-                  <p class="form__note" aria-live="polite" id="form-status"></p>
-                </form>
-              </div>
+                <!-- Checkboxes -->
+                <div class="checkbox">
+                  <input id="comms" name="comms" type="checkbox" />
+                  <label for="comms">Acepto recibir comunicaciones sobre este webinar y futuros eventos formativos.</label>
+                </div>
+
+                <div class="checkbox">
+                  <input id="privacy" name="privacy" type="checkbox" required />
+                  <label for="privacy">
+                    He leído y acepto la <a href="#" target="_blank" rel="noopener"> política de privacidad</a>.
+                    <span aria-hidden="true">*</span>
+                  </label>
+                </div>
+                <p class="error" id="error-privacy" aria-live="polite"></p>
+
+                <button class="btn btn--primary btn--block" type="submit">Confirmar inscripción</button>
+
+                <p class="form__note" aria-live="polite" id="form-status"></p>
+              </form>
             </div>
           </div>
+
         </div>
       </section>
-
       <!-- OBJETIVES -->
       <section class="section" aria-labelledby="objectives-title">
         <div class="container">
@@ -229,7 +225,7 @@
 
     <!-- FOOTER -->
     <footer class="site-footer">
-      <div class="container footer__grid">
+      <div class="footer__container">
         <!-- Logo -->
         <img class="logo logo--small" src="./public/Generis_Pharma.svg" alt="Generis Pharma Logo" width="120" height="36">
 
