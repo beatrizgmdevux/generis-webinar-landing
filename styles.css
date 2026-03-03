@@ -340,7 +340,6 @@ background: var(--color-background);
 
 .hero__content {
   padding: var(--space-md) 0;
-  grid-area: hero;
 }
 
 .hero__grid {
@@ -446,7 +445,6 @@ background: var(--color-background);
    - field: bloque label + control + hint + error
 ========================================================= */
 .hero__form {
-  grid-area: form;
   background: var(--color-background-subtle);
 }
 
