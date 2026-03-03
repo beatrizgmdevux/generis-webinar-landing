@@ -4,7 +4,7 @@ Landing page responsive para la inscripción a un webinar científico (dermatiti
 Incluye formulario con validación en JavaScript y estado de confirmación tras envío correcto.
 
 ## Demo
-- GitHub Pages: (pega aquí tu URL)
+- GitHub Pages: https://beatrizgmdevux.github.io/generis-webinar-landing/
 
 ## Features
 - Diseño responsive (mobile-first + desktop)
