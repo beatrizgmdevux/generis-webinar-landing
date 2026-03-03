@@ -390,8 +390,8 @@ background: var(--color-background);
 /* Detalles del webinar (fecha/hora) */
 .meta-row {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items:center ;
   gap: var(--space-sm);
 
 }
@@ -416,13 +416,13 @@ background: var(--color-background);
   gap: 16px;
   align-self: stretch;
 }
+
 .speaker__avatar {
   width: 60px;
   height: 60px;
   aspect-ratio: 1/1;
 
   border-radius: 100px;
-  background: cover no-repeat;
 }
 
 .speaker__info {
@@ -455,7 +455,6 @@ background: var(--color-background);
   align-items: start;
   align-self: stretch;
 
-  background: var(--color-background-subtle);
   border-radius: var(--radius-lg);
   
 }
@@ -520,16 +519,16 @@ textarea:focus {
 }
 
 /* Estado de error en el input */
-.input.is-valid,
-.select.is-valid {
+.is-valid {
   border-color: var(--color-error);
-  outline: none;
 }
 
-.input.is-valid:focus,
-.select.is-valid:focus {
+.is-valid:focus {
   outline: 2px solid var(--color-error);
+  outline-offset: 2px;
 }
+
+
 
 .hint {
   padding: 2px 0;

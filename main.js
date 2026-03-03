@@ -74,6 +74,7 @@
     function clearError(field, errorId) {
         field.classList.remove("is-invalid");
         field.removeAttribute("aria-invalid");
+        field.removeAttribute("aria-describedby");
 
         const errorEl = document.getElementById(errorId);
         if (errorEl) errorEl.textContent= "";
@@ -137,7 +138,7 @@
         ];
 
         fields.forEach(({el, errorId}) =>{
-            el.addEventListener("input", () => {
+            el.addEventListener("change", () => {
                 if (el.classList.contains("is-invalid")) {
                     clearError(el, errorId);
                 }
