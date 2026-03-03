@@ -17,7 +17,7 @@
 
     /* Template del Success State (se inyecta en el DOM al enviar form) */
     const successTemplate = `
-        <div class="success-state is visible" role="alert" aria-live="asertive">
+        <div class="success-state is-visible" role="alert" aria-live="assertive">
             <div class="success-state__icon" aria-hidden="true">
                 <span class="material-symbols-outlined">check_circle</span>
             </div>
@@ -71,7 +71,7 @@
      * @param {HTMLElement} field
      * @param {string} errorId
      */
-    function clearError(field, errorId) {ç
+    function clearError(field, errorId) {
         field.classList.remove("is-invalid");
         field.removeAttribute("aria-invalid");
 
