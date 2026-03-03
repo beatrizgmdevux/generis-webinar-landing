@@ -33,9 +33,28 @@ Proyecto realizado como prueba técnica para el puesto de **Frontend Developer &
 - `main.js` — Validación del formulario
 - `/public` — Assets (logo e imágenes)
 
+```
+.
+├── index.html                  # Maquetación (HTML semántico)
+├── styles.css                  # Estilos
+├── main.js                     # Validación del form
+├── public/                     # Assets (logo e imágenes)
+├── briefing/                   # Briefing planteado
+├── marca/                      # Material proporcionado para la prueba técnica
+└── README.md                   # Este archivo
+```
+
 ## Diseño Figma
 - Link: https://www.figma.com/design/3zK28GhAyxZ4pI7MQ57zxi/Generis-Pharma---Prueba-t%C3%A9cnica?m=auto&t=2ZB0HJeIGSZSj4R8-1
 
 ## Próximos pasos tras testeo con usuarios (genéricos)
 - Ajuste de tamaños de tipografía
 
+--
+## 👩🏻‍💻 Autora
+**Beatriz García Muñoz**  
+- Frontend Developer & UX/UI Designer
+- [LinkedIn](https://www.linkedin.com/in/beatriz-garc%C3%ADa-mu%C3%B1oz-46144a11a/) 
+
+--
+✨ *Gracias por la oportunidad.* 
