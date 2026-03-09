@@ -564,7 +564,7 @@ textarea:focus {
   min-height: 18px;
 }
 
-/* Checkbox */ /*!REVISAR*/
+/* Checkbox */
 .checkbox {
   display: flex;
   flex-direction: row;
@@ -573,7 +573,6 @@ textarea:focus {
   align-items: flex-start;
   gap: var(--space-sm);
   align-self: stretch;
-
 }
 
 .checkbox input[type="checkbox"] {
