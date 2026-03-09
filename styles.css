@@ -573,7 +573,7 @@ textarea:focus {
   align-items: flex-start;
   gap: var(--space-sm);
   align-self: stretch;
-  flex-wrap: wrap;
+
 }
 
 .checkbox input[type="checkbox"] {
