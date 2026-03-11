@@ -28,11 +28,6 @@ Proyecto realizado como prueba técnica para el puesto de **Frontend Developer &
 - **GitHub Pages** (despliegue)
 
 ## Estructura del proyecto
-- `index.html` — Maquetación
-- `styles.css` — Estilos
-- `main.js` — Validación del formulario
-- `/public` — Assets (logo e imágenes)
-
 ```
 .
 ├── index.html                  # Maquetación (HTML semántico)
@@ -46,9 +41,12 @@ Proyecto realizado como prueba técnica para el puesto de **Frontend Developer &
 
 ## Diseño Figma
 - Link: https://www.figma.com/design/3zK28GhAyxZ4pI7MQ57zxi/Generis-Pharma---Prueba-t%C3%A9cnica?m=auto&t=2ZB0HJeIGSZSj4R8-1
+- He tomado algunas decisiones de mejora de UI conforme he desarrollado la landing. Por ejemplo: el botón terciario.
 
-## Próximos pasos tras testeo con usuarios (genéricos)
-- Ajuste de tamaños de tipografía
+## Próximos pasos
+- Testear con usuarios
+- Verificar tamaños de tipografía en desktop
+- Ampliar el footer con RRSS
 
 --
 ## 👩🏻‍💻 Autora

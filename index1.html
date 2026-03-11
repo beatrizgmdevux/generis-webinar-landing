@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
 
     <!-- Estilos -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles1.css">
 
   </head>
 
@@ -39,7 +39,10 @@
 
           <!-- Columna izquierda -->
           <div class="hero__content">
-            <p class="pill">Webinar científico</p>
+            <div class="hero__eyebrow">
+              <p class="pill">Webinar científico</p>
+              <span class="hero-badge">Plazas limitadas</span>
+            </div>
 
             <h1 id="hero-title">
               Estrategias efectivas para el control de la dermatitis atópica
@@ -50,6 +53,12 @@
             </p>
 
             
+            <div class="hero__highlights" aria-label="Datos clave del webinar">
+              <span class="highlight-chip">Sesión online en directo</span>
+              <span class="highlight-chip">90 min · Casos clínicos</span>
+              <span class="highlight-chip">Enfoque terapéutico actual</span>
+            </div>
+
             <div class="hero__meta" aria-label="Detalles del webinar">
               <div class="meta-card">
                 <div class="meta-row">
@@ -60,6 +69,11 @@
                 <div class="meta-row">
                   <span class="meta-icon material-symbols-outlined" aria-hidden="true">alarm</span>
                   <span><strong>18:00 a 19:30 (GMT+1)</strong></span>
+                </div>
+
+                <div class="meta-row">
+                  <span class="meta-icon material-symbols-outlined" aria-hidden="true">monitoring</span>
+                  <span><strong>Actualización terapéutica + criterios de decisión</strong></span>
                 </div>
               </div>
               
@@ -91,15 +105,13 @@
                 <div class="field">
                   <label for="fullName">Nombre y apellido(s)</label>
                   <input id="fullName" name="fullName" type="text" autocomplete="name" placeholder="Lucía Galán" required />
-                  <p class="hint">Introduzca su nombre y apellidos.</p>
                   <p class="error" id="error-fullName" aria-live="polite"></p>
                 </div>
 
                 <!-- Email -->
                 <div class="field">
-                  <label for="email">Email</label>
-                  <input id="email" name="email" type="email" autocomplete="email" placeholder="luciagalan@gmail.com" required />
-                  <p class="hint">Introduzca su email profesional.</p>
+                  <label for="email">Email profesional</label>
+                  <input id="email" name="email" type="email" autocomplete="email" placeholder="luciagalan@hospital.com" required />
                   <p class="error" id="error-email" aria-live="polite"></p>
                 </div>
 
@@ -114,7 +126,6 @@
                     <option value="Medicina familiar">Medicina familiar</option>
                     <option value="Otra">Otra</option>
                   </select>
-                  <p class="hint">Elija su especialidad.</p>
                   <p class="error" id="error-specialty" aria-live="polite"></p>
                 </div>
 
@@ -127,7 +138,7 @@
                 <div class="checkbox">
                   <input id="privacy" name="privacy" type="checkbox" required />
                   <label for="privacy">
-                    He leído y acepto la &nbsp;<a href="#" target="_blank" rel="noopener">política de privacidad</a>.
+                    He leído y acepto la <a href="#" target="_blank" rel="noopener"> política de privacidad</a>.
                     <span aria-hidden="true">*</span>
                   </label>
                 </div>
@@ -144,13 +155,11 @@
       <!-- OBJETIVES -->
       <section class="section" aria-labelledby="objectives-title">
         <div class="container">
+          <h2 id="objectives-title">Objetivos del webinar</h2>
+          <p class="section__lead">
+            Un webinar diseñado para profesionales que buscan actualización científica de calidad
+          </p>
 
-          <div class="section-header">
-            <h2 id="objectives-title">Objetivos del webinar</h2>
-            <p class="section__lead">
-              Un webinar diseñado para profesionales que buscan actualización científica de calidad
-            </p>
-          </div>
           <!-- ITEM CARDS -->
           <div class="cards">
             <!-- Item -->
@@ -192,131 +201,59 @@
       <!-- SCIENTIFIC CONTENT -->
       <section class="section section--subtle" aria-labelledby="resources-title">
         <div class="container">
-
-          <div class="section-header">
-            <h2 id="resources-title">Contenido científico relacionado</h2>
-            <p class="section__lead">
-              Accede a recursos y sesiones previas orientadas al abordaje clínico de la dermatitis atópica.
-            </p>
-          </div>
+          <h2 id="resources-title">Contenido científico relacionado</h2>
+          <p class="section__lead">
+            Accede a recursos y sesiones previas orientadas al abordaje clínico de la dermatitis atópica.
+          </p>
 
           <!-- ITEM CARDS -->
           <div class="cards">
             <!-- Item -->
-            <article class="resource-card">
+            <article class="resource-card resource-card--featured">
               <div class="resource-card__media">
-                <img
-                  src="./public/contenido-webinar.avif"
-                  alt="Investigador en laboratorio usando un microscopio"
-                  loading="lazy"
-                />
-
-                <span class="resource-card__badge">WEBINAR</span>
-                <span class="resource-card__year">2025</span>
+                <img src="./public/contenido-webinar.avif" alt="Investigador en laboratorio usando un microscopio" loading="lazy">
+                <span class="resource-card__label">Más consultado</span>
               </div>
-
-              <div class="resource-card__body">
-                <div class="resource-card__tags" aria-label="Etiquetas del contenido">
-                  <span class="tag tag--blue">Dermatitis atópica</span>
-                  <span class="tag tag--blue">Terapéutica</span>
-                </div>
-
-                <h3>Webinar 2025 - Nuevos enfoques terapéuticos en dermatitis</h3>
-
-                <p>Nuevos enfoques terapéuticos en dermatitis atópica.</p>
-
-                <div class="resource-card__meta" aria-label="Metadatos del recurso">
-                  <span class="resource-card__meta-item">
-                    <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
-                    Mar 2025
-                  </span>
-
-                  <span class="resource-card__meta-item">
-                    <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
-                    60 min
-                  </span>
-                </div>
-
-                <a class="btn btn--tertiary" href="#" aria-label="Ver recurso: Webinar 2025 — Nuevos enfoques terapéuticos">Ver recurso</a>
+              <div class="resource-card__meta" aria-label="Metadatos del recurso">
+                <span class="tag">Webinar grabado</span>
+                <span class="tag">45 min</span>
+                <span class="tag">2025</span>
               </div>
+              <h3>Webinar 2025 · Nuevos enfoques terapéuticos</h3>
+              <p>Resumen práctico de nuevas dianas terapéuticas y criterios de uso en dermatitis atópica.</p>
+              <a class="btn btn--tertiary" href="#" aria-label="Ver recurso: Webinar 2025 — Nuevos enfoques terapéuticos">Ver recurso</a>
             </article>
 
             <!-- Item -->
             <article class="resource-card">
               <div class="resource-card__media">
-                <img
-                  src="./public/contenido-documento.avif"
-                  alt="Profesionales revisando documentación clínica"
-                  loading="lazy"
-                />
-
-                <span class="resource-card__badge">DOCUMENTO</span>
-                <span class="resource-card__year">PDF</span>
+                <img src="./public/contenido-documento.avif" alt="Profesionales revisando documentación clínica" loading="lazy">
+                <span class="resource-card__label">Descargable</span>
               </div>
-
-              <div class="resource-card__body">
-                <div class="resource-card__tags" aria-label="Etiquetas del contenido">
-                  <span class="tag tag--blue">Guía clínica</span>
-                  <span class="tag tag--green">Actualizado</span>
-                </div>
-
-                <h3>Documento técnico</h3>
-
-                <p>Optimización del tratamiento en pacientes crónicos.</p>
-
-                <div class="resource-card__meta" aria-label="Metadatos del recurso">
-                  <span class="resource-card__meta-item">
-                    <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
-                    Ene 2025
-                  </span>
-
-                  <span class="resource-card__meta-item">
-                    <span class="material-symbols-outlined" aria-hidden="true">assignment</span>
-                    12 páginas
-                  </span>
-                </div>
-
-                <a class="btn btn--tertiary" href="#" aria-label="Ver recurso: Documentación técnica">Ver recurso</a>
+              <div class="resource-card__meta" aria-label="Metadatos del recurso">
+                <span class="tag">Guía clínica</span>
+                <span class="tag">PDF</span>
+                <span class="tag">Actualizado</span>
               </div>
+              <h3>Documentación técnica</h3>
+              <p>Algoritmos de tratamiento y recomendaciones para optimizar el abordaje de pacientes crónicos.</p>
+              <a class="btn btn--tertiary" href="#" aria-label="Ver recurso: Documentación técnica">Ver recurso</a>
             </article>
 
             <!-- Item -->
             <article class="resource-card">
               <div class="resource-card__media">
-                <img
-                  src="./public/contenido-sesión.avif"
-                  alt="Profesional sanitario en un entorno clínico"
-                  loading="lazy"
-                />
-
-                <span class="resource-card__badge">SESIÓN CLÍNICA</span>
-                <span class="resource-card__year">Vídeo</span>
+                <img src="./public/contenido-sesión.avif" alt="Profesional sanitario en un entorno clínico" loading="lazy">
+                <span class="resource-card__label">Caso práctico</span>
               </div>
-
-              <div class="resource-card__body">
-                <div class="resource-card__tags" aria-label="Etiquetas del contenido">
-                  <span class="tag tag--blue">Casos prácticos</span>
-                  <span class="tag tag--orange">Avanzado</span>
-                </div>
-
-                <h3>Sesión clínica</h3>
-
-                <p>Manejo de casos complejos en consulta.</p>
-
-                <div class="resource-card__meta" aria-label="Metadatos del recurso">
-                  <span class="resource-card__meta-item">
-                    <span class="material-symbols-outlined" aria-hidden="true">calendar_month</span>
-                    Dic 2024
-                  </span>
-
-                  <span class="resource-card__meta-item">
-                    <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
-                    45 min
-                  </span>
-                </div>
-
-                <a class="btn btn--tertiary" href="#" aria-label="Ver recurso: Sesión clínica - Manejo de casos complejos en consulta.">Ver recurso</a>
+              <div class="resource-card__meta" aria-label="Metadatos del recurso">
+                <span class="tag">Sesión clínica</span>
+                <span class="tag">30 min</span>
+                <span class="tag">1 ponente</span>
               </div>
+              <h3>Sesión clínica</h3>
+              <p>Manejo de casos complejos en consulta con decisiones terapéuticas aplicables desde la primera visita.</p>
+              <a class="btn btn--tertiary" href="#" aria-label="Ver recurso: Sesión clínica">Ver recurso</a>
             </article>
           </div>
         </div>
@@ -347,6 +284,6 @@
 
 
     <!-- JS -->
-    <script src="./main.js"></script>
+    <script src="./main1.js"></script>
   </body>
 </html>
