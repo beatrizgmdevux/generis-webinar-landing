@@ -581,6 +581,10 @@ textarea:focus {
   align-self: stretch;
 }
 
+.checkbox .nowrap {
+  white-space: nowrap;
+}
+
 .checkbox input[type="checkbox"] {
   width: 18px;
   height: 18px;
