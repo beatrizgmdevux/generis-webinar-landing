@@ -595,7 +595,9 @@ textarea:focus {
   font-size: var(--fs-small);
   color: var(--color-support);
   cursor: pointer;
+  line-height: 1.6;
 }
+
 
 /* Nota de estado del formulario (success / error general) */
 .form__note {
