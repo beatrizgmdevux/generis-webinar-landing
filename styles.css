@@ -664,10 +664,11 @@ textarea:focus {
   display: flex;
   padding: var(--space-md);
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: var(--space-sm);
   align-self: stretch;
+  flex: 1;
 
   max-width: 400px;
   border-radius: 16px;
@@ -706,6 +707,13 @@ textarea:focus {
   max-width: 400px;
   background: var(--color-background);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 1px 2px -1px rgba(0, 0, 0, 0.10);
+
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(10,41,11,0.12);
 }
 
 .resource-card__media {
@@ -815,6 +823,8 @@ textarea:focus {
   align-items: center;
   gap: var(--space-xs);
   color: var(--color-contrast-950);
+
+  font-size: 0.75rem;
 }
 
 .resource-card__meta-item .material-symbols-outlined {
