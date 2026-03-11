@@ -322,8 +322,14 @@ a:hover {
   padding: var(--space-xs) 0;
 }
 
+.container__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .logo {
-  width: 200px;
+  width: 280px;
   height: auto;
   aspect-ratio: 24/11;
 }
@@ -668,6 +674,7 @@ textarea:focus {
 .cards {
   display: grid;
   grid-template-rows: 1fr;
+  justify-content: center;
   gap: var(--space-sm);
 }
 
@@ -933,6 +940,7 @@ textarea:focus {
   .container {
     padding: var(--space-xl) var(--space-md);
   }
+
 
   .hero__grid {
     grid-template-columns: 1fr 1fr;
